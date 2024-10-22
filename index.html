@@ -1,10 +1,48 @@
-
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Моя Веб Сторінка</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            background-color: #333;
+            color: white;
+            padding: 10px;
+        }
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .logo {
+            font-size: 24px;
+        }
+        .menu {
+            display: flex;
+            gap: 15px;
+        }
+        .user-profile {
+            cursor: pointer;
+        }
+    </style>
+</head>
 <body>
     <header>
         <nav>
-            <div class="logo"></div>
-            <div class="menu"></div>
-            <div class="user-profile"></div>
+            <div class="logo">Логотип</div>
+            <div class="menu">
+                <a href="#">Головна</a>
+                <a href="#">Про нас</a>
+                <a href="#">Контакти</a>
+            </div>
+            <div class="user-profile">Профіль</div>
         </nav>
     </header>
 </body>
+</html>
