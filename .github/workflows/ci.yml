@@ -1,0 +1,33 @@
+name: CI/CD Pipeline
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v2
+
+    - name: Set up Node.js
+      uses: actions/setup-node@v2
+      with:
+        node-version: '14'  # Вкажіть потрібну версію Node.js
+
+    - name: Install dependencies
+      run: npm install
+
+    - name: Run tests
+      run: npm test  # Замість цього використовуйте команду для тестування вашого проєкту
+
+    - name: Deploy to Production
+      run: |
+        echo "Deploying application to production..."
+        # Додайте команду для розгортання вашого додатку, наприклад, через FTP, AWS, або іншою технологією
